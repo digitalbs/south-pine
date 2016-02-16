@@ -1,0 +1,67 @@
+@import '_variables';
+@import '_colors';
+@import '_fonts';
+@import '_externals';
+@import 'modules/_module';
+
+body {
+  background: url('../img/seamless_paper_texture.png');
+
+  &.sticky {
+    padding-top: 5em;
+
+    @media screen and (max-width: $break-xsmall) {
+
+      .sp-sticky-nav {
+        height: 82px;
+      }
+
+    }
+
+    .sp-utility-nav {
+      position: fixed;
+    }
+
+    .btn-collapsed-nav {
+      position: fixed;
+    }
+  }
+}
+
+a {
+  &:hover, a:link, &:visited, &:active {
+    text-decoration: none;
+    color: $bronze;
+  }
+
+  color: $bronze;
+
+  &.sp-link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.logo, h1, h2, h3, h4 {
+  font-family: 'fanwoodregular';
+  text-align: center;
+}
+
+.btn-sp {
+  background: $bronze;
+  color: $white;
+
+  &:hover {
+    background: darken($bronze, 3%);
+    color: $white;
+  }
+}
+
+h2 {
+  font-size: 3em;
+}

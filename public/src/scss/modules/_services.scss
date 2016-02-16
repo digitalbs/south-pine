@@ -1,0 +1,26 @@
+.sp-service {
+  padding: 3em 0;
+  margin: 2em auto;
+  border-bottom: 1px solid $silver;
+
+  h4 {
+    font-size: 2em;
+    text-align: center
+  }
+
+  p {
+    font-size: 1.4em;
+    margin: 1em 0;
+  }
+
+  .service-list {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      padding: 0.5em 0;
+      font-size: 1.1em;
+    }
+  }
+}

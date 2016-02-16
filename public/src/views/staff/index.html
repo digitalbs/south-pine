@@ -1,0 +1,17 @@
+<section class="meet-the-staff">
+  <img class="sp-hero-image" src="dist/img/homeImage.jpg" alt="Animals" />
+</section>
+<section class="row">
+  <div class="col-md-1"></div>
+  <section class="col-md-10">
+    <div class="sp-staff-member" ng-repeat="staffMember in staff.staffMembers">
+      <h3>{{ staffMember.name }}</h3>
+      <div class="sp-staff-member-content">
+          <img src='dist/img/{{ staffMember.image }}' class="col-md-3" alt="{{ staffMember.name }}" />
+          <p class="col-md-9" ng-bind-html="staffMember.about"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="col-md-1"></div>
+</section>

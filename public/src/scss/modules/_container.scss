@@ -1,0 +1,22 @@
+.sp-main {
+  background: $white;
+
+  p {
+    font-size: 1.3em;
+    margin: 1em 0;
+    line-height: 1.5em;
+  }
+}
+
+.sp-page-content {
+  padding: 1.5em 0;
+
+  @media screen and (max-width: $break-xsmall) {
+    padding: 0;
+  }
+
+  h1, h2, h3 {
+    text-align: left;
+    line-height: 1.6em;
+  }
+}

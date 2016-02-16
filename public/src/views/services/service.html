@@ -1,0 +1,36 @@
+<section class="{{ service.page.class }}">
+  <h2>{{ service.page.title }}</h2>
+  <img class="sp-hero-image" src="{{ service.page.hero }}" alt="{{ service.page.title }}" />
+  <h3 ng-bind-html="service.page.subhead"></h3>
+
+  <!-- Carousel -->
+  <uib-carousel ng-if="service.page.callouts" interval="3000">
+    <uib-slide ng-repeat="callout in service.page.callouts" active="callout.active" index="callout.id">
+      <img class="sp-callout-image" src="{{ callout.image }}" alt="{{ callout.title }}" />
+      <h4>{{ callout.title }}</h4>
+      <p>{{ callout.content }}</p>
+      <p class="sp-download-file"><a href="{{ callout.download }}" target="_blank">Download Document</a></p>
+    </uib-slide>
+  </uib-carousel>
+
+  <section class="sp-service" ng-repeat="s in service.page.services">
+    <header>
+      <h4>{{ s.title }}</h4>
+    </header>
+    <p ng-bind-html="s.content"></p>
+  </section>
+
+  <section class="sp-prescription-policy">
+    <header>
+      <h4>{{ service.page.prescription.title }}</h4>
+    </header>
+    <p>{{ service.page.prescription.content }}</p>
+  </section>
+
+  <section class="sp-emergency-care">
+    <header>
+      <h4>{{ service.page.emergency.title }}</h4>
+    </header>
+    <p ng-bind-html="service.page.emergency.content"></p>
+  </section>
+</section>

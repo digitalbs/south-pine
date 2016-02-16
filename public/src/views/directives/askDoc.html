@@ -1,0 +1,31 @@
+<form class="ask-the-doc" name="askTheDoc" ng-submit="askTheDoc()" novalidate>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <br/>
+    <input class="form-control form-name" name="firstName" required placeholder="Please enter a first name" ng-model="askDoc.firstName" />
+    <input class="form-control  form-name last" name="lastName" required placeholder="Please enter a last name" ng-model="askDoc.lastName" />
+    <div class="sp-form-error" ng-show="askTheDoc.$submitted || askTheDoc.firstName.$touched">
+      <div ng-show="askTheDoc.firstName.$error.required">Tell us your first name.</div>
+    </div>
+    <div class="sp-form-error" ng-show="askTheDoc.$submitted || askTheDoc.lastName.$touched">
+      <div ng-show="askTheDoc.lastName.$error.required">Tell us your last name.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input class="form-control" required name="email" placeholder="Please enter an email" type="email" ng-model="askDoc.email" />
+    <div class="sp-form-error" ng-show="askTheDoc.$submitted || askTheDoc.email.$touched">
+      <span ng-show="askTheDoc.email.$error.required">Tell us your email address.</span>
+      <span ng-show="askTheDoc.email.$error.email">This is not a valid email address.</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="question">Question</label>
+    <textarea rows="7" class="form-control" name="question" required ng-model="askDoc.question"></textarea>
+    <div class="sp-form-error" ng-show="askTheDoc.$submitted || askTheDoc.question.$touched">
+      <div ng-show="askTheDoc.question.$error.required">Please give us a question and we'll get back to you as soon as we can.</div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-sp pull-right">Ask the Doc</button>
+</form>

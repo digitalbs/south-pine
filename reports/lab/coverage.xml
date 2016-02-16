@@ -1,0 +1,24 @@
+<testsuite tests="2" skipped="0" errors="0" failures="2" time="0.041">
+<testcase classname="Endpoint: Staff it returns an array of staff objects on GET" name="Endpoint: Staff it returns an array of staff objects on GET" time="0.02">
+<failure message="Expected 404 to equal specified value" type="Error">
+        <![CDATA[Error: Expected 404 to equal specified value
+    at internals.flags.forEach.internals.grammar.forEach.forEach.forEach.internals.equal.compare (/Users/bschneider/Development/south-pine/node_modules/code/lib/index.js:226:17)
+    at /Users/bschneider/Development/south-pine/test/api/staff.js:29:43
+    at /Users/bschneider/Development/south-pine/node_modules/hapi/lib/connection.js:295:16
+    at /Users/bschneider/Development/south-pine/node_modules/hapi/node_modules/shot/lib/index.js:201:13
+    at doNTCallback0 (node.js:407:9)
+    at process._tickDomainCallback (node.js:377:13)]]>
+      </failure>
+    </testcase>
+<testcase classname="Endpoint[Failure]: Staff it handles a failure if the staff[array] endpoint is invalid GET" name="Endpoint[Failure]: Staff it handles a failure if the staff[array] endpoint is invalid GET" time="0.004">
+<failure message="Expected 404 to equal specified value" type="Error">
+        <![CDATA[Error: Expected 404 to equal specified value
+    at internals.flags.forEach.internals.grammar.forEach.forEach.forEach.internals.equal.compare (/Users/bschneider/Development/south-pine/node_modules/code/lib/index.js:226:17)
+    at /Users/bschneider/Development/south-pine/test/api/staff.js:43:43
+    at /Users/bschneider/Development/south-pine/node_modules/hapi/lib/connection.js:295:16
+    at /Users/bschneider/Development/south-pine/node_modules/hapi/node_modules/shot/lib/index.js:201:13
+    at doNTCallback0 (node.js:407:9)
+    at process._tickDomainCallback (node.js:377:13)]]>
+      </failure>
+    </testcase>
+</testsuite>

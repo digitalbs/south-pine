@@ -1,0 +1,168 @@
+%active-nav {
+  a {
+    font-weight: bold;
+  }
+}
+
+%links {
+  display: inline-block;
+  padding: 1em 0;
+
+  a {
+    color: $bronze;
+    font-family: 'fanwoodregular';
+  }
+}
+
+.logo {
+  padding: 0.5em;
+  margin-top: 1em;
+  font-size: 2.5em;
+  text-align: center;
+  cursor: pointer;
+  color: $bronze;
+  width: 100%;
+
+  @media screen and (max-width: $break-small) {
+    font-size: 2em;
+  }
+
+  span {
+    display: block;
+    margin-top: 0;
+    line-height: 24px;
+  }
+}
+
+.sp-main-nav {
+  background: url('../img/seamless_paper_texture.png');
+}
+
+.sp-utility-nav {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 100100;
+
+  ul {
+    margin: 0 2em;
+  }
+
+  a {
+    color: $bronze;
+  }
+}
+
+.sp-nav {
+  background: $white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $silver;
+  border-bottom: 1px solid $silver;
+
+  @media screen and (max-width: $break-xsmall) {
+    border-top: none;
+  }
+
+  .link {
+    @extend %links;
+
+    @media screen and (max-width: $break-xsmall) {
+      display: none;
+    }
+
+    &:last-child {
+      a {
+        border-right: none;
+      }
+    }
+
+    a {
+      padding: 0 1.5em;
+      font-size: 1.2em;
+      border-right: 1px solid $silver;
+
+      @media screen and (max-width: $break-small) {
+        font-size: 1em;
+      }
+    }
+
+    &.active {
+      @extend %active-nav;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.sp-nav-collapse {
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  overflow: hidden;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.5s all ease-in;
+
+  ul {
+    display: block;
+    padding: 1em;
+    width: 18em;
+    margin: 2.5em 1em 2em;
+  }
+
+  li {
+    padding: 2em 2em 1em;
+  }
+
+  a {
+    color: $bronze;
+    padding: 1.5em 0;
+    font-size: 1.3em;
+  }
+}
+
+.sp-nav-collapse.active {
+  @media screen and (max-width: $break-xsmall) {
+    display: block;
+    width: 20em;
+  }
+
+  @media screen and (min-width: $break-xsmall) {
+    display: none;
+  }
+}
+
+.btn-collapsed-nav {
+  position: absolute;
+  top: 0.5em;
+  z-index: 10000;
+  display: none;
+  background: none;
+  border: none;
+  color: $bronze;
+  margin: 0 0.5em;
+  outline: none;
+
+  @media screen and (max-width: $break-xsmall) {
+    display: block;
+  }
+}
+
+.sp-sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 130px;
+
+  .logo {
+    margin: 0;
+    transition: margin 0.5s ease-in;
+  }
+}

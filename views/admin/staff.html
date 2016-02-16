@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="South Pine Animal Hospital">
+  <meta name="author" content="Cory Tucker">
+
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../css/bootstrap-theme.min.css" rel="stylesheet" />
+  <title>South Pine Animal Hospital - Admin</title>
+
+</head>
+
+<body>
+  <h1>South Pine Animal Hospital</h1>
+
+  <h2>Staff</h2>
+  <div id="staff">
+
+  </div>
+
+  <div class="container-fluid">
+    <div class="status">Staff Member updated</div>
+    <form>
+      <div class="form-group">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="input" class="form-control" placeholder="Enter first name" id="firstName" />
+      </div>
+      <div class="form-group">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="input" class="form-control" placeholder="Enter last name" id="lastName" />
+      </div>
+      <div class="form-group">
+        <label for="about" class="form-label">About</label>
+        <textarea class="form-control" placeholder="About Staff Member" id="about"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="dtHired" class="form-label">Date Hired</label>
+        <input type="input" class="form-control" placeholder="Enter Date Hired" id="dtHired" />
+      </div>
+      <div class="pull-right">
+        <button id="submitStaff" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
+
+  <style>
+  .status {
+    display: none;
+  }
+  </style>
+  <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/staff.js"></script>
+</body>
+</html>

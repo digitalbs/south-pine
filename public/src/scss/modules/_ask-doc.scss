@@ -1,0 +1,33 @@
+.ask-the-doc {
+
+  &.ng-invalid.ng-sumbitted {
+    label {
+      color: $error;
+    }
+
+    input {
+      border: 1px solid $error;
+    }
+  }
+
+  .form-name {
+    width: 49%;
+    margin-right: 1%;
+    display: inline-block;
+
+    &.last {
+      margin-right: 0;
+    }
+  }
+
+  .sp-form-error {
+    color: $helper;
+  }
+
+  &.ng-submitted {
+    .sp-form-error {
+     color: $error;
+    }
+  }
+}
+

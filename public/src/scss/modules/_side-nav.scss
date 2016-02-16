@@ -1,0 +1,42 @@
+.sp-side-nav {
+  border-right: 1px solid $silver;
+  @media screen and (max-width: $break-xsmall) {
+    border-right: none;
+    text-align: center;
+    border-bottom: 1px solid $silver;
+  }
+
+  li {
+    list-style: none;
+    padding: 1em 0;
+
+    @media screen and (max-width: $break-xsmall) {
+      display: inline-block;
+      padding: 1em 0;
+      text-align: center;
+
+      &:last-child {
+        a {
+          border-right: none;
+        }
+      }
+    }
+
+    &.active {
+      a {
+        font-weight: bold;
+      }
+    }
+
+
+
+    a {
+      color: $bronze;
+
+      @media screen and (max-width: $break-xsmall) {
+        border-right: 1px solid $silver;
+        padding: 0 1.5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="South Pine Animal Hospital">
+  <meta name="author" content="Cory Tucker">
+
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="./dist/css/app.css" />
+  <title>South Pine Animal Hospital</title>
+
+</head>
+
+<body ng-init="isCollapsed = false" ng-controller="spGlobal as global">
+  <nav class="sp-utility-nav">
+    <ul>
+      <li><a href="https://www.facebook.com/South-Pine-Animal-Hospital-320047881371664/?fref=nf" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+    </ul>
+  </nav>
+  <nav class="sp-main-nav clearfix" sticky sticky-class="sp-sticky-nav" body-class="sticky" disabled-sticky="global.stickyDisabled">
+    <h1 class="logo" ui-sref="home">South Pine <span>Animal Hospital</span></h1>
+    <ul class="sp-nav">
+      <li class="link" ui-sref-active="active"><a ui-sref="services">Services</a></li>
+      <li class="link" ui-sref-active="active"><a ui-sref="staff">Meet The Staff</a></li>
+      <li class="link" ui-sref-active="active"><a ui-sref="askDoc">Ask the Doc</a></li>
+      <li class="link" ui-sref-active="active"><a ui-sref="emergency">Emergency Clinic</a></li>
+      <li class="link" ui-sref-active="active"><a ui-sref="specials">Specials</a></li>
+      <li class="link" ui-sref-active="active"><a ui-sref="forms">Forms</a></li>
+    </ul>
+  </nav>
+  <button class="btn-collapsed-nav" ng-click="isCollapsed = !isCollapsed">
+      <i class="fa fa-paw fa-2x"></i>
+  </button>
+  <div class="nav-collapse sp-nav-collapse" ng-class="{active: isCollapsed}">
+      <ul>
+          <li ng-click="isCollapsed = false" ui-sref-active="active"><a ui-sref="services">Services</a></li>
+          <li ng-click="isCollapsed = false" ui-sref-active="active"><a ui-sref="staff">Meet The Staff</a></li>
+          <li ng-click="isCollapsed = false" ui-sref-active="active"><a ui-sref="askDoc">Ask the Doc</a></li>
+          <li ng-click="isCollapsed = false" ui-sref-active="active"><a ui-sref="emergency">Emergency Clinic</a></li>
+          <li ng-click="isCollapsed = false" ui-sref-active="active"><a ui-sref="specials">Specials</a></li>
+          <li ng-click="isCollapsed = false" ui-sref-active="active"><a ui-sref="forms">Forms</a></li>
+      </ul>
+  </div>
+
+  <main class="container-fluid sp-main" ui-view>
+  </main>
+  <script type="text/javascript" src="./dist/js/app.js"></script>
+  <script type="text/javascript">
+    angular.element(document).ready(function () {
+      angular.bootstrap(document, ['sp']);
+    });
+  </script>
+  <script type='text/javascript' id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+</body>
+</html>
